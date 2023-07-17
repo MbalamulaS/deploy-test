@@ -26,5 +26,5 @@ jobs:
         cache: 'npm'
     - name: Initial steps
     - run: cd /var/lib/actions-runner/react-project/deploy-test/deploy-test
-    - run: mkdir shaaban
+    - run: mkdir mbalamula
     
