@@ -28,7 +28,7 @@ jobs:
            cd /var/lib/actions-runner/react-project/deploy-test/deploy-test/
            mkdir shaaban
            cp -r /var/lib/actions-runner/react-project/deploy-test/deploy-test/shaaban ~/
-           cd ~/
+           cd ~/shaaban
            touch mbalamula.doc
            cd /var/lib/actions-runner/react-project/deploy-test/deploy-test
            npm install
