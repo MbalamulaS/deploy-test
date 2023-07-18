@@ -28,8 +28,9 @@ jobs:
       uses: appleboy/ssh-action@v0.1.2
       with:
         host: ${{secrets.IP_SSH}}
-        key: ${{secrets.REACT_VM_SSH}}
         username: ${{secrets.USERNAME_SSH}}
+        key: ${{secrets.REACT_VM_SSH}}
+        
     #comment addeddi
     # - run: |
     #        cd /var/lib/actions-runner/react-project/deploy-test/deploy-test/
