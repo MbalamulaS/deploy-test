@@ -29,6 +29,7 @@ jobs:
       with:
         host: ${{secrets.IP_SSH}}
         username: ${{secrets.USERNAME_SSH}}
+        port: 22
         key: ${{secrets.REACT_VM_SSH}}
         
     #comment addeddi
