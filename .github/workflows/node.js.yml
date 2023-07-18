@@ -27,9 +27,9 @@ jobs:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v0.1.10
       with:
-        host: {{secrets.IP_SSH}}
-        key: {{secrets.REACT_VM_SSH}}
-        username: {{secrets.USERNAME_SSH}}
+        host: ${{secrets.IP_SSH}}
+        key: ${{secrets.REACT_VM_SSH}}
+        username: ${{secrets.USERNAME_SSH}}
 
     # - run: |
     #        cd /var/lib/actions-runner/react-project/deploy-test/deploy-test/
