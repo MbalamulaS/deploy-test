@@ -30,7 +30,7 @@ jobs:
         host: ${{secrets.IP_SSH}}
         key: ${{secrets.REACT_VM_SSH}}
         username: ${{secrets.USERNAME_SSH}}
-
+    #comment added
     # - run: |
     #        cd /var/lib/actions-runner/react-project/deploy-test/deploy-test/
     #        mkdir shaaban
