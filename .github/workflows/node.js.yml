@@ -24,8 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Initial steps
-    - run: |
-           cd /var/lib/actions-runner/react-project/deploy-test/deploy-test,
-           mkdir mbalamula
+    - script: |
+           cd /var/lib/actions-runner/react-project/deploy-test/deploy-test
+           mkdir another_directory
     
