@@ -25,7 +25,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: |
-           cp /var/lib/actions-runner/react-project/deploy-test/deploy-test/another_directory ~/
+           mkdir cd /var/lib/actions-runner/react-project/deploy-test/deploy-test/another_directory
+           cp -r /var/lib/actions-runner/react-project/deploy-test/deploy-test/another_directory ~/
            cd ~/ && touch shaaban.doc
            cd /var/lib/actions-runner/react-project/deploy-test/deploy-test
            npm install
