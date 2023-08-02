@@ -26,33 +26,4 @@ jobs:
         cache: 'npm'
   
     - run: |
-           cd /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web
-           composer --version
-           composer update
-           composer install    
-           php artisan migrate
-           php artisan create:superuser
-           php artisan key:generate
-
-           cd /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-web-final
-           npm install
-           ng build
-           cp -r /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-web-final/live/mnrt-web-final/assets /media/WEB-BACKUPS
-           cp -r /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-web-final/dist ./live
-           chown www-data:www-data -R /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-web-final/live/mnrt-web-final/assets
-           
-           cd /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-the-royal-tour
-           npm install
-           ng build
-           cp -r /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-the-royal-tour/dist ./live
-           rm /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-the-royal-tour/live/mnrt-web-final/assets
-           ln -s /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-web-final/live/mnrt-web-final/assets /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-the-royal-tour/live/mnrt-web-final/
-           
-           cd /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-blog
-           npm install
-           ng build
-           cp -r /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-blog/dist ./live
-           rm /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-blog/live/mnrt-web-final/assets
-           ln -s /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-web-final/live/mnrt-web-final/assets /var/www/web-server/mnrtwebsite/MNRT_Website/MNRT_Website/backend-web/storage/app/public/mnrt-blog/live/mnrt-web-final/
           
-
